@@ -1,0 +1,84 @@
+body{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  /*fuentes*/
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-smoothing: antialiased;
+}
+/*clearfix*/
+.clearfix{
+  clear: both;
+  float: none;
+}
+/*estilo del footer*/
+.footer_grid{
+  position:static;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr fit-content;
+  grid-gap: 30px;
+  background-color: #4e5e7c;
+  color: rgb(183, 200, 240);
+  text-align: center;
+}
+@media all and (min-width: 800px){
+  .footer_grid{
+      position:static;
+      display: grid;
+      height: fit-content;
+      text-align: left;
+      grid-template-columns: 1fr 40% 1fr;
+      grid-template-rows: repeat(2,fit-content);
+      grid-gap: 30px;
+      background-color: #4e5e7c;
+      color: rgb(183, 200, 240);
+
+  }
+  .copyright{
+      color: #000;
+      background-color: #5374b8a3;
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 4;
+  }
+  .description p{
+      width: 70%;
+      font-size: 15px;
+      margin-top: 10px;
+      color: #fff;
+  }
+}
+.footer_grid a{
+  text-decoration: none;
+}
+.description img{
+  margin-bottom: 10px;
+}
+.description p{
+  font-size: 15px;
+  margin-top: 10px;
+  color: #fff;
+}
+.links p{
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.copyright{
+  color: #000;
+  background-color: #5374b8a3;
+  text-align: center;
+}
+.copyright h5{
+  font-size: 12px;
+  color: rgb(183, 200, 240);
+}
+.contact_footer p{
+  color: #000;
+  margin-top: 5px;
+  font-size: 20px;
+}
