@@ -1,0 +1,72 @@
+<section id="contactForm">
+<div class="d-flex align-center justify-content-center mt-5 mb-5">
+  <form (submit)="sendEmail($event)" class="col-sm-6">
+    <div data-aos="fade-up" class="mb-3">
+      <label for="name" class="form-label">Nombre</label>
+      <input
+        type="text"
+        class="form-control"
+        id="name"
+        name="name"
+        required
+      />
+    </div>
+    <div class="invalid-feedback">Por favor rellene el formulario.</div>
+    <div data-aos="fade-down" class="mb-3">
+      <label for="surname" class="form-label">Apellido</label>
+      <input type="text" class="form-control" id="surname"
+      name="surname"
+      required />
+    </div>
+    <div class="invalid-feedback">Por favor rellene el formulario.</div>
+    <div data-aos="fade-up" class="mb-3">
+      <label for="email" class="form-label">Correo electrónico</label>
+      <input
+        type="email"
+        class="form-control"
+        name="email"
+        id="email"
+        aria-describedby="emailHelp"
+        required
+      />
+      <div id="emailHelp" class="form-text">
+        Nunca compartiremos sus datos personales con nadie más.
+      </div>
+      <div class="invalid-feedback">Por favor rellene el formulario.</div>
+    </div>
+    <div data-aos="fade-down" class="mb-3">
+      <label for="phone" class="form-label">Telefono</label>
+      <input
+      name="phone"
+        type="phone"
+        class="form-control"
+        id="phone"
+        aria-describedby="phoneHelp"
+        required
+      />
+      <div id="emailHelp" class="form-text">
+        Nunca compartiremos sus datos personales con nadie más.
+      </div>
+      <div class="invalid-feedback">Por favor rellene el formulario.</div>
+    </div>
+    <div data-aos="fade-up" class="mb-3">
+      <label for="message" class="form-label">Mensaje</label>
+      <textarea
+        class="form-control"
+        name="message"
+        id="message"
+        rows="3"
+        value="Deseo contratar sus serivicios"
+      ></textarea>
+    </div>
+    <button
+      data-aos="flip-up"
+      type="submit"
+      id="send"
+      class="btn btn-primary"
+    >
+      Enviar
+    </button>
+  </form>
+</div>
+</section>
