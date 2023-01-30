@@ -1,0 +1,129 @@
+<h2 class="text-center">Crear Proyecto</h2>
+<div class="row">
+  <div class="col-md-3"></div>
+  <div class="col-md-6 col-md-offset-3">
+    <div class="jumbotron">
+      <form
+        [formGroup]="angForm"
+        (ngSubmit)="postdata(angForm)"
+        autocomplete="off"
+      >
+        <div class="form-group">
+          <label for="title">Titulo</label>
+          <input
+            type="text"
+            name="title"
+            formControlName="title"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="title"
+          />
+        </div>
+        <div class="form-group">
+          <label for="subtitle">Subtitulo</label>
+          <input
+            type="text"
+            name="subtitle"
+            formControlName="subtitle"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="subtitulo"
+          />
+        </div>
+        <div class="form-group">
+          <label for="descrip">Descripcion</label>
+          <textarea
+            type="text"
+            rows="20"
+            name="descrip"
+            formControlName="descrip"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="Descripcion"
+          ></textarea>
+        </div>
+        <div class="form-group">
+          <label for="img">imagen principal</label>
+           <input
+            type="text"
+            name="img1"
+            formControlName="img1"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="imagen 1"
+          />
+        </div>
+        <div class="form-group">
+          <label for="img1">imagen 1</label>
+          <input
+            type="text"
+            name="img1"
+            formControlName="img1"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="imagen 1"
+          />
+        </div>
+        <div class="form-group">
+          <label for="img2">imagen 2</label>
+          <input
+            type="text"
+            name="img2"
+            formControlName="img2"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="imagen 2"
+          />
+        </div>
+        <div class="form-group">
+          <label for="img3">imagen 3</label>
+          <input
+            type="text"
+            name="img3"
+            formControlName="img3"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="imagen 3"
+          />
+        </div>
+        <div class="form-group">
+          <label for="img4">imagen 4</label>
+          <input
+            type="text"
+            name="img4"
+            formControlName="img4"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="imagen 4"
+          />
+        </div>
+        <div class="form-group">
+          <label for="img5">imagen 5</label>
+          <input
+            type="text"
+            name="img5"
+            formControlName="img5"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="imagen 5"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="img6">imagen 6</label>
+          <input
+            type="text"
+            name="img6"
+            formControlName="img6"
+            autocomplete="off"
+            class="form-control input-sm"
+            placeholder="imagen 6"
+          />
+        </div>
+
+        <button type="submit" class="btn btn-success">Crear</button>
+      </form>
+    </div>
+  </div>
+  <div class="col-md-3"></div>
+</div>

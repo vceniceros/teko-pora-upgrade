@@ -1,1 +1,2 @@
 CREATE TABLE projects( id int not null auto_increment, title varchar(150) not null, subtitle varchar(150) not null,descrip text(1000) not null,img varchar(150) not null,img1 varchar(150) not null,img2 varchar(150),img3 varchar(150),img4 varchar(150),img5 varchar(150),img6 varchar(150), primary key(id));
+CREATE TABLE users( id int not null auto_increment, user varchar(150) not null, password varchar(150) not null, primary key(id));

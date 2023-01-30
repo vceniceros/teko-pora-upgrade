@@ -1,0 +1,33 @@
+<section id="dashboardPanel">
+  <div class="container-fluid mt-5">
+    <div class="row" >
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th class="col"></th>
+            <th class="col">id</th>
+            <th class="col">titulo</th>
+            <th class="col">sub titulo</th>
+            <th class="col">descripcion</th>
+            <th class="col">imagen principal</th>
+            <th class="col">opciones</th>
+          </tr>
+        </thead>
+        <tbody class="table-group-divider" *ngFor="let project of projects">
+          <tr class="row"></tr>
+          <td>{{project.id}}</td>
+          <td>{{project.title}}</td>
+          <td>{{project.subtitle}}</td>
+          <td>{{project.descrip}}</td>
+          <td><img src="{{project.img}}" alt="" width="100" height="100"></td>
+          <td><a routerLink="updateProject/{{project.id}}"><button class="btn btn-sm btn-success" >Modificar</button></a>
+            <button class="btn btn-sm btn-danger" (click)="eliminarProyecto(project.id)">Eliminar</button></td>
+        </tbody>
+
+      </table>
+      <div class="container align-center justify-content-center">
+        <a [routerLink]="['createNewProject']"><button class="btn btn-primary">crear proyecto</button></a>
+    </div>
+    </div>
+  </div>
+</section>
