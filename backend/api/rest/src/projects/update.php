@@ -1,5 +1,5 @@
 <?php
-include_once("database.php");
+include_once("../users/database.php");
 $postdata = file_get_contents("php://input");
 if(isset($postdata) && !empty($postdata))
 {
@@ -17,7 +17,7 @@ $img4 = mysqli_real_escape_string($mysqli, trim($request->img4));
 $img5 = mysqli_real_escape_string($mysqli, trim($request->img5));
 $img6 = mysqli_real_escape_string($mysqli, trim($request->img6));
 
-$sql = "UPDATE `projects` SET `title` = '$title', `subtitle` = '$subtitle', `descrip` = '$descrip', `img` = '$img',`img1` = '$img1',`img2` = '$img2',`img3` = '$img3',`img4` = '$img4',`img5` = '$img5',`img6` = '$img6' WHERE `id` = '{$id}' LIMIT 1";
+$sql = "UPDATE `projects` SET `id` = '$id' ,`title` = '$title', `subtitle` = '$subtitle', `descrip` = '$descrip', `img` = '$img',`img1` = '$img1',`img2` = '$img2',`img3` = '$img3',`img4` = '$img4',`img5` = '$img5',`img6` = '$img6' WHERE `id` = '{$id}' LIMIT 1";
 if ($mysqli->query($sql) === TRUE) {
 $authdata = [
 'title' => $title,

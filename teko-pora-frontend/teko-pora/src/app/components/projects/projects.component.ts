@@ -22,7 +22,8 @@ export class ProjectsComponent implements OnInit{
      const id = this.activatedRouter.snapshot.params['id'];
     this._proyectService.getProject(id).subscribe((projects: Projects[])=>{
       this.Project = projects;
-      console.log(this.Project)
+      console.log(this.Project);
+
     })
  }
 }

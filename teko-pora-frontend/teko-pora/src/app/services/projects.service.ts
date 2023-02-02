@@ -8,17 +8,17 @@ import { map } from 'rxjs';
   providedIn: 'root',
 })
 export class ProjectsService {
-  HOST = 'http://localhost/';
-  API_URI = 'teko-pora/teko-pora-upgrade/backend/api/rest/src';
+  HOST = 'https://fundacion-teko-pora.org';
+  API_URI = '/teko-pora/teko-pora-upgrade/backend/api/rest/src';
   constructor(private http: HttpClient) {}
   getProjects(): Observable<Projects[]> {
-    return this.http.get<Projects[]>(
-      `${this.HOST + this.API_URI}/post-projects.php`
+    return this.http.get<any>(
+      `${this.HOST + this.API_URI}/projects/read.php`
     );
   }
   getProject(id: number): Observable<Projects[]> {
-    return this.http.get<Projects[]>(
-      `${this.HOST + this.API_URI}/post-projects.php?id=${id}`
+    return this.http.get<any>(
+      `${this.HOST + this.API_URI}/projects/readOne.php?id=${id}`
     );
   }
   public createProject(

@@ -42,6 +42,7 @@ import { ProjectsComponent } from './components/projects/projects.component';
 import { ProjectsMenuComponent } from './components/projects-menu/projects-menu.component';
 import { ProjectsSliderComponent } from './components/projects-slider/projects-slider.component';
 import { ProjectsTextComponent } from './components/projects-text/projects-text.component';
+import { PathLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 @NgModule({
@@ -95,7 +96,7 @@ import { ProjectsTextComponent } from './components/projects-text/projects-text.
     HttpClientModule,
     UsersService,
     HttpClient,
-
+    { provide: LocationStrategy, useClass: PathLocationStrategy }
   ],
   bootstrap: [AppComponent]
 })

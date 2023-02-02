@@ -1,5 +1,5 @@
 <?php
-require 'database.php';
+require '../users/database.php';
 
 // Extract, validate and sanitize the id.
 $id = ($_GET['id'] !== null && (int)$_GET['id'] > 0)? mysqli_real_escape_string($mysqli , (int)$_GET['id']) : false;

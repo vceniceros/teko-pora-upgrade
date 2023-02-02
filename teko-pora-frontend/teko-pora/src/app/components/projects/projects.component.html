@@ -1,14 +1,14 @@
 <section id="proyecto">
-<div class="row">
-  <h2 class="display-3 mb-5" data-aos="fade-left"> {{this.Project.title}}</h2>
+<div class="row" *ngFor="let project of this.Project">
+  <h2 class="display-3 mb-5" data-aos="fade-left"> {{project.title}}</h2>
 <div class="col-lg-5">
 <app-projects-slider></app-projects-slider>
 </div>
 <div class="col-lg-7 text-start">
 <h3 class="display-5 mb-4" data-aos="fade-left">
-  {{this.Project.subtitle}}
+  {{project.subtitle}}
 </h3>
-<p style="white-space: pre-wrap;" data-aos="zoom-up">{{this.Project.descrip}}</p>
+<p style="white-space: pre-wrap;" data-aos="zoom-up">{{project.descrip}}</p>
 </div>
 </div>
 </section>

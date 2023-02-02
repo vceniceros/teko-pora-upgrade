@@ -26,6 +26,7 @@ export class AdminDashboardUpdateProjectComponent implements OnInit {
     private fb: FormBuilder,
   ) {
     this.angForm = this.fb.group({
+      id: ['', Validators.required],
       title: ['', Validators.required],
       subtitle: ['', Validators.required],
       descrip: ['', Validators.required],
@@ -48,6 +49,7 @@ export class AdminDashboardUpdateProjectComponent implements OnInit {
   }
   postdata(angForm1: {
     value: {
+      id: any;
       title: any;
       subtitle: any;
       descrip: any;
@@ -62,7 +64,7 @@ export class AdminDashboardUpdateProjectComponent implements OnInit {
   }) {
     this._proyectService
       .updateProject(
-        this.Project.id,
+        angForm1.value.id,
         angForm1.value.title,
         angForm1.value.subtitle,
         angForm1.value.descrip,
@@ -85,7 +87,9 @@ export class AdminDashboardUpdateProjectComponent implements OnInit {
         }
       );
   }
-
+  get id() {
+    return this.angForm.get('id');
+  }
   get title() {
     return this.angForm.get('title');
   }

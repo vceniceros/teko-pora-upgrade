@@ -27,6 +27,7 @@ export class AdminSingupComponent implements OnInit {
   .subscribe(
   data => {
   this.router.navigate(['login']);
+  alert("Usuario creado exitosamente")
   },
 
   error => {

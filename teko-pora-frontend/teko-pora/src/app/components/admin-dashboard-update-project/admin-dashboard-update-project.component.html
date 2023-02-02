@@ -1,14 +1,25 @@
-<h1>probando</h1>
+<h1>Actualizar</h1>
 <div class="row">
   <div class="col-md-3"></div>
-  <div class="col-md-6 col-md-offset-3">
+  <div class="col-md-6 col-md-offset-3" *ngFor="let project of this.Project ">
     <div class="jumbotron">
       <form
         [formGroup]="angForm"
         (ngSubmit)="postdata(angForm)"
         autocomplete="off"
       >
-
+      <div class="form-group">
+        <label for="id">Id</label>
+        <input
+          type="number"
+          name="id"
+          formControlName="id"
+          autocomplete="off"
+          class="form-control input-sm"
+          [ngModel]="project.id"
+          placeholder="{{project.id}}"
+        />
+      </div>
         <div class="form-group">
           <label for="title">Titulo</label>
           <input
@@ -17,8 +28,8 @@
             formControlName="title"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.title"
-            placeholder="{{this.Project.title}}"
+            [ngModel]="project.title"
+            placeholder="{{project.title}}"
           />
         </div>
         <div class="form-group">
@@ -29,8 +40,8 @@
             formControlName="subtitle"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.subtitle"
-            placeholder="{{this.Project.subtitle}}"
+            [ngModel]="project.subtitle"
+            placeholder="{{project.subtitle}}"
           />
         </div>
         <div class="form-group">
@@ -42,8 +53,8 @@
             formControlName="descrip"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.descrip"
-            placeholder="{{this.Project.descrip}}"
+            [ngModel]="project.descrip"
+            placeholder="{{project.descrip}}"
           ></textarea>
         </div>
         <div class="form-group">
@@ -54,8 +65,8 @@
             formControlName="img"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.img"
-            placeholder="{{this.Project.img}}"
+            [ngModel]="project.img"
+            placeholder="{{project.img}}"
           />
         </div>
         <div class="form-group">
@@ -66,8 +77,8 @@
             formControlName="img1"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.img1"
-            placeholder="{{this.Project.img1}}"
+            [ngModel]="project.img1"
+            placeholder="{{project.img1}}"
           />
         </div>
         <div class="form-group">
@@ -78,8 +89,8 @@
             formControlName="img2"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.img2"
-            placeholder="{{this.Project.img2}}"
+            [ngModel]="project.img2"
+            placeholder="{{project.img2}}"
           />
         </div>
         <div class="form-group">
@@ -90,8 +101,8 @@
             formControlName="img3"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.img3"
-            placeholder="{{this.Project.img3}}"
+            [ngModel]="project.img3"
+            placeholder="{{project.img3}}"
           />
         </div>
         <div class="form-group">
@@ -102,8 +113,8 @@
             formControlName="img4"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.img4"
-            placeholder="{{this.Project.img4}}"
+            [ngModel]="project.img4"
+            placeholder="{{project.img4}}"
           />
         </div>
         <div class="form-group">
@@ -114,8 +125,8 @@
             formControlName="img5"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.img5"
-            placeholder="{{this.Project.img5}}"
+            [ngModel]="project.img5"
+            placeholder="{{project.img5}}"
           />
         </div>
 
@@ -127,8 +138,8 @@
             formControlName="img6"
             autocomplete="off"
             class="form-control input-sm"
-            [ngModel]="this.Project.img6"
-            placeholder="{{this.Project.img6}}"
+            [ngModel]="project.img6"
+            placeholder="{{project.img6}}"
           />
         </div>
 
