@@ -1,0 +1,224 @@
+body, html{
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  /*fuentes*/
+  font-family: 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-font-smoothing: antialiased;
+  -moz-osx-smoothing: antialiased;
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+td{
+  max-width: 100px;
+  height: 100px;
+  border: solid 1px gray;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+a{
+  text-decoration: none;
+  color: #000;
+}
+a:hover{
+  color: #fff;
+}
+/*clearfix*/
+.clearfix{
+  clear: both;
+  float: none;
+}
+/*estilo del footer*/
+.footer_grid{
+  position:static;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr fit-content;
+  grid-gap: 30px;
+  background-color: #008101;
+  color: #c5f7c5;
+  text-align: center;
+}
+@media all and (min-width: 800px){
+  .footer_grid{
+      position:static;
+      display: grid;
+      height: fit-content;
+      text-align: left;
+      grid-template-columns: 1fr 40% 1fr;
+      grid-template-rows: repeat(2,fit-content);
+      grid-gap: 30px;
+      background-color: #008101;
+      color: #c5f7c5;
+
+  }
+  .copyright{
+      color: #000;
+      background-color: #05db05;
+      text-align: center;
+      grid-column-start: 1;
+      grid-column-end: 4;
+  }
+  .description p{
+      width: 70%;
+      font-size: 15px;
+      margin-top: 10px;
+      color: #fff;
+  }
+}
+.footer_grid a{
+  text-decoration: none;
+}
+.description img{
+  margin-bottom: 10px;
+}
+.description p{
+  font-size: 15px;
+  margin-top: 10px;
+  color: #fff;
+}
+.links p{
+  font-size: 20px;
+  color: #fff;
+  text-decoration: none;
+}
+.copyright{
+  color: #000;
+  background-color: #05db05;
+  text-align: center;
+}
+.copyright h5{
+  font-size: 12px;
+  color: #c5f7c5;
+}
+.contact_footer p{
+  color: #000;
+  margin-top: 5px;
+  font-size: 20px;
+}
+/*Slider principal*/
+#homeSlider{
+  background-image: url("../img/Teko-pora-menu-principal.jpeg");
+  background-position: center;
+  background-size: cover;
+  min-height: 800px;
+  width: 100vw;
+}
+#homeSlider p{
+  margin-top: 20px;
+  font-size: 1.5em;
+}
+.homeSliderText{
+  width: 100%;
+  background-color: #fff;
+
+}
+
+/*home fectures*/
+#homePrestations{
+  width: 100%;
+}
+/*home proyectos*/
+#homeProjects{
+  border-top: solid 0.5px rgb(49, 49, 49);
+  border-bottom: solid 0.5px rgb(49, 49, 49);
+  background-color: rgb(95, 95, 95);
+  color: rgb(234, 234, 234);
+}
+.homeProjectsImg{
+  position: relative;
+}
+.homeProjectsGrid{
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 1fr;
+  grid-gap:30px;
+}
+.homeProjectsGridImg{
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 800px){
+  .homeProjectsGrid{
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+/*Home donations*/
+#homeDonations{
+  border-top: solid 0.5px rgb(0, 0, 0);
+  border-bottom: solid 0.5px rgb(0,0,0);
+  background-color: rgb(10, 10, 10);
+  color: rgb(255, 254, 254);
+}
+.homeDonationsGrid{
+  display: grid;
+  grid-template-columns: 30% 65%;
+  grid-template-rows: 1fr;
+  grid-gap:30px;
+}
+.homeDonationsGridImg{
+  margin: 0;
+  padding: 0;
+}
+@media (max-width: 800px){
+  .homeDonationsGrid{
+    display: flex;
+    flex-direction: column;
+  }
+}
+/*Home Quotes*/
+#homeQuotes{
+  width: 100vw;
+  background-color: rgb(206, 204, 204);
+}
+.homeQuotes{
+  height: 100vh;
+}
+@media (max-width: 800px){
+  .homeQuotes{
+    height: 80vh;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+}
+/*Home contact*/
+.homeContact{
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  background-color: rgb(95, 95, 95);
+}
+.btn-contact{
+  background-color: rgb(8, 124, 179);
+  width: 14vw;
+  height: 9vh;
+  border: rgb(0, 114, 167) 1px;
+  transition: all 1000ms;
+}
+@media (max-width: 800px){
+  .btn-contact{
+    width: 40vw;
+    height: 8vh;
+
+
+  }
+}
+
+
+.btn-contact:hover{
+  background-color: rgb(0, 82, 121);
+  color: #fff;
+}
+.howWeAreBody{
+background-color: rgb(202, 201, 201);
+}
