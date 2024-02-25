@@ -8,7 +8,7 @@ import { Users } from '../models/users';
 })
 export class UsersService {
   redirectUrl!: string;
-  baseUrl: string = 'https://fundacion-teko-pora.org';
+  baseUrl: string = 'https://fundaciontekoporaandresito.org/';
   @Output() getLoggedInName: EventEmitter<any> = new EventEmitter();
   constructor(private httpClient: HttpClient) {}
   public userlogin(user: any, password: any) {
@@ -16,7 +16,7 @@ export class UsersService {
     return this.httpClient
       .post<any>(
         this.baseUrl +
-          '/teko-pora/teko-pora-upgrade/backend/api/rest/src/users/login.php',
+          'backend/api/rest/src/users/login.php',
         { user, password }
       )
       .pipe(
@@ -32,7 +32,7 @@ export class UsersService {
     return this.httpClient
       .post<any>(
         this.baseUrl +
-          '/teko-pora/teko-pora-upgrade/backend/api/rest/src/users/register.php',
+          'backend/api/rest/src/users/register.php',
         { user, password }
       )
       .pipe(

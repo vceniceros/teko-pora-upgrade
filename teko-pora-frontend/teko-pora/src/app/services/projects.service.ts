@@ -8,8 +8,8 @@ import { map } from 'rxjs';
   providedIn: 'root',
 })
 export class ProjectsService {
-  HOST = 'https://fundacion-teko-pora.org';
-  API_URI = '/teko-pora/teko-pora-upgrade/backend/api/rest/src';
+  HOST = 'https://fundaciontekoporaandresito.org/';
+  API_URI = 'backend/api/rest/src';
   constructor(private http: HttpClient) {}
   getProjects(): Observable<Projects[]> {
     return this.http.get<any>(

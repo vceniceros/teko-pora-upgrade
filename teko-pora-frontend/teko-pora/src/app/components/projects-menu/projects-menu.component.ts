@@ -29,6 +29,6 @@ ngOnInit(){
   this._projectService.getProjects().subscribe((projects: Projects[])=>{
     this.projects = projects;
     console.log(this.projects);
-  })
+  },)
 }
 }
